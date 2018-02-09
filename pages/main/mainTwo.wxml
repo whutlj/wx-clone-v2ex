@@ -1,0 +1,20 @@
+<view>
+  mainTwo
+  <template name="aa">
+    <view>aa</view>
+  </template>
+  <wxs module="tool">
+    var name = "李杰";
+    module.exports.name = name;
+    var getMax = function (array) {
+      var max = undefined;
+      for (var i=0; i < array.length; i++) {
+        max = max === undefined ? array[i] : (max > array[i] ? max : array[i]);
+      }
+      return max;
+    }
+    module.exports.getMax = getMax;
+  </wxs>
+  <view>{{tool.name}}</view>
+  <view>{{tool.getMax(arr)}}</view>
+</view>

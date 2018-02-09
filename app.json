@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/main/main",
+    "pages/main/mainTwo",
+    "pages/share/share",
+    "pages/temp/template"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "XiaoMiHouTao",
+    "navigationBarTextStyle":"black"
+  }
+
+}

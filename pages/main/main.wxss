@@ -1,0 +1,22 @@
+.main {
+  height:1000px;
+}
+.widthFull {
+  width: 100%;
+}
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  width:120px;
+  height: 32px;
+  border-radius: 2px;
+  border:1px solid #ccc;
+  background: #ffc400;
+}
+.item input {
+  height: 32px;
+}

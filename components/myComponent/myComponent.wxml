@@ -1,0 +1,8 @@
+<view>
+  <view>
+    这里是自定义组件
+  </view>
+  <view>
+    <button type="primary" size="mini" bind:tap="clickMyEvent">触发组件事件</button>
+  </view>
+</view>
