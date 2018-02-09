@@ -1,3 +1,8 @@
 <view>
   this is V2EX CLONE
+  <view>
+    <navigator url="/pages/main/main" open-type="switchTab">tab</navigator>
+    <navigator url="/pages/logs/logs" open-type="switchTab">tab2</navigator>
+    <navigator url="/pages/share/share" open-type="switchTab">tab3</navigator>
+  </view>
 </view>

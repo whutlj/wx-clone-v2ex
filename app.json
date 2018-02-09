@@ -9,9 +9,9 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "XiaoMiHouTao",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#0f4fa8",
+    "navigationBarTitleText": "V2EX CLONE",
+    "navigationBarTextStyle":"white"
   }
 
 }
