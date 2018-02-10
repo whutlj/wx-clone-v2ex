@@ -1,0 +1,5 @@
+.topic-box{
+  display: "flex";
+  animation-direction: "row";
+  justify-content: "space-around";
+}

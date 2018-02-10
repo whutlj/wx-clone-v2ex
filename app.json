@@ -1,17 +1,46 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/main/main",
-    "pages/main/mainTwo",
-    "pages/share/share",
-    "pages/temp/template"
+    "pages/all/all",
+    "pages/hot/hot",
+    "pages/tech/tech",
+    "pages/kuwork/kuwork",
+    "pages/question/question",
+    "pages/creativity/creativity"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0f4fa8",
     "navigationBarTitleText": "V2EX CLONE",
     "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "position": "top",
+    "color": "#cccccc",
+    "selectedColor": "#ffffff",
+    "backgroundColor":"#0f4fa8",
+    "borderStyle":"black",
+    "list":[
+      {
+        "pagePath": "pages/all/all",
+        "text": "全部"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "最热"
+      },
+      {
+        "pagePath": "pages/tech/tech",
+        "text": "技术"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "问与答"
+      },
+      {
+        "pagePath": "pages/kuwork/kuwork",
+        "text": "酷工作"
+      }
+    ]
   }
 
 }

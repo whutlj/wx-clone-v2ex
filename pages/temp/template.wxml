@@ -1,6 +1,0 @@
-<view>
-  <view>模板页</view>
-  <template name="temp">
-    <view>{{name}}:{{age}}</view>
-  </template>
-</view>
