@@ -1,13 +1,6 @@
-<view class='container'>
-  <template name="topicTab">
-    <view class="topic-box">
-      <view class="user-avatar">1</view>
-      <view class="topic-title">2</view>
-      <view class="topic-reply">3</view>
-    </view>
-  </template>
-  <view>展示全部</view>
-  <view wx:for="{{topicList}}" wx:for-item ="item" wx:key="item.id">
+<scroll-view scroll-y="true" class="container" >
+  <import src="/template/topicItem"/>
+  <view wx:for="{{topicList}}" wx:for-item ="item" wx:key="item.id" class="m-width">
     <template is="topicTab" data="{{...item}}"></template>
   </view>
-</view>
+</scroll-view>

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    topicList: []
   },
 
   /**
@@ -19,7 +19,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    const _self = this;
+    _self.getHotTopic();
   },
 
   /**
@@ -62,5 +63,19 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getHotTopic: function () {
+    const _self = this
+    wx.request({
+      url: "https://www.v2ex.com/api/topics/hot.json",
+      dataType:"json",
+      success: function (res) {
+        console.log(res.data)
+        _self.topicList = res.data
+      },
+      fail: function () {
+        console.log('获取最热主题失败')
+      }
+    })
   }
 })

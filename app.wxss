@@ -1,10 +1,12 @@
 /**app.wxss**/
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 100%;
+  align-items: stretch;
+  justify-content: space-space;
+  height: 1110rpx;
+  padding: 10rpx 10rpx;
 } 
+scroll-view, view {
+  box-sizing: border-box;
+}

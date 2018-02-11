@@ -1,0 +1,16 @@
+<template name="topicTab">
+    <view class="topic-box">
+      <view class="user-avatar">
+        <image src="{{member.avatar_normal}}"></image>
+        <text class="user-name">{{member.username}}</text>
+      </view>
+      <view class="topic-title">
+        <text class="user-name">{{title}}</text>
+        <view class="topic-info">
+          <text class="topic-type">{{node.title}}</text>
+          <text>{{last_touched}}</text>
+        </view>
+      </view>
+      <view class="topic-reply">{{replies}}</view>
+    </view>
+  </template>

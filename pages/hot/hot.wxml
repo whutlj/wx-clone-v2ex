@@ -1,2 +1,6 @@
-<!--pages/hot/hot.wxml-->
-<text>pages/hot/hot.wxml</text>
+<scroll-view scroll-y="true" class="container" >
+  <import src="/template/topicItem"/>
+  <view wx:for="{{topicList}}" wx:for-item ="item" wx:key="item.id" class="m-width">
+    <template is="topicTab" data="{{...item}}"></template>
+  </view>
+</scroll-view>
