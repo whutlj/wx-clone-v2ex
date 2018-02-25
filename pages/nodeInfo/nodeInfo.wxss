@@ -1,0 +1,41 @@
+/* pages/nodeInfo/nodeINfo.wxss */
+.node-box {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #001D25;
+  color: #fff;
+  min-height: 200rpx;
+}
+.node-avatar {
+  width: 146rpx;
+  margin: auto 0;
+}
+.node-avatar image {
+  width: 146rpx;
+  height: 146rpx;
+  border-radius: 50% 50%;
+}
+.node-description-box {
+  width: 420rpx;
+  /*margin-left: 25rpx;*/
+}
+
+.name {
+  margin-top: 20rpx;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 35rpx;
+}
+.node-topics {
+  font-size: 12px;
+  width: 126rpx;
+  text-align: center;
+  line-height: 40rpx;
+  margin: auto 0;
+}

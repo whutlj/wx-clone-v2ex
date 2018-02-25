@@ -1,0 +1,45 @@
+var topicReplyTime = function (timestamp) {
+  var result = '';
+  var now = getDate() / 1000;
+  var seconds = now - timestamp;//获取秒数
+  if(seconds < 1){
+      result+= '刚刚';
+      return result;
+  }
+  if(seconds  <10){
+      result += '几秒前';
+      return result;
+  }
+  var minutes = seconds / 60;
+  if(minutes < 1){
+      result += Math.floor(seconds) + '秒钟前';
+      return result;
+  }
+  var hours = minutes / 60;
+  if(hours < 1){
+      result += Math.floor(minutes) + '分钟前';
+      return result;
+  }
+  var days = hours / 24;
+  if(days < 1){
+      result += Math.floor(hours) + '小时前';
+      return result;
+  }else{
+      result += Math.floor(days) + '天前';
+      return result;
+  }
+}
+
+var nodeDescriptionHandle = function (data) {
+  if (data) {
+    console.log('111111')
+    return data
+  } else {
+    var result = '暂无描述'
+    console.log(result)
+    return result
+  }
+}
+
+module.exports.topicReplyTime = topicReplyTime
+module.exports.nodeDescriptionHandle = nodeDescriptionHandle

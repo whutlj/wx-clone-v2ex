@@ -1,11 +1,11 @@
-// pages/hot/hot.js
+// pages/nodeInfo/nodeINfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topicList: [],
+    nodeInfo: {},
     loading: true
   },
 
@@ -13,18 +13,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const _self = this;
+    const node = options.nodeInfo
+    const _self = this
+    wx.setNavigationBarTitle({
+      title: '节点详情',
+    })
     _self.setData({
       loading: true
     })
-    _self.getHotTopic();
+    _self.getNodeInfo(node)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**
@@ -52,11 +56,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    const _slef = this
-    _self.setData({
-      loading: true
-    })
-    _self.getHotTopic()
+  
   },
 
   /**
@@ -72,41 +72,18 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getHotTopic: function () {
+  getNodeInfo: function (nodeName) {
     const _self = this
     wx.request({
-      url: "https://www.v2ex.com/api/topics/hot.json",
-      dataType:"json",
+      url: 'https://www.v2ex.com/api/nodes/show.json?name=' + nodeName,
+      method: 'Get',
+      dataType: 'json',
       success: function (res) {
         _self.setData({
-          topicList: res.data,
-          loading: false
-        })
-      },
-      fail: function () {
-        console.log('获取最热主题失败')
-        _self.setData({
+          nodeInfo: res.data,
           loading: false
         })
       }
-    })
-  },
-  getUserInfo: function (event) {
-    const userName = event.currentTarget.dataset.userName
-    wx.navigateTo({
-      url: '/pages/userInfo/userInfo'
-    })
-  },
-  getNodeInfo: function (event) {
-    const nodeInfo = event.currentTarget.dataset.nodeInfo
-    wx.navigateTo({
-      url: '/pages/nodeInfo/nodeInfo?nodeInfo=' + nodeInfo,
-    })
-  },
-  getTopicDetail: function (event) {
-    const topicDetail = event.currentTarget.dataset.topicDetail
-    wx.navigateTo({
-      url: '/pages/topicDetail/topicDetail?topicDetail=' + topicDetail,
     })
   }
 })

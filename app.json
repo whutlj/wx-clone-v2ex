@@ -5,13 +5,17 @@
     "pages/tech/tech",
     "pages/kuwork/kuwork",
     "pages/question/question",
-    "pages/creativity/creativity"
+    "pages/creativity/creativity",
+    "pages/topicDetail/topicDetail",
+    "pages/userInfo/userInfo",
+    "pages/nodeInfo/nodeInfo"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0f4fa8",
     "navigationBarTitleText": "V2EX CLONE",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "position": "top",

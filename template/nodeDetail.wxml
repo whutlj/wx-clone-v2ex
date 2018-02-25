@@ -1,0 +1,21 @@
+ <wxs module='tools' src='../wxs/tools.wxs'></wxs>
+<template name='nodeDetail'>
+  <view class='node-box'>
+    <view class='node-avatar'>
+      <image class='' src='{{avatar_large}}'></image>
+    </view>
+    <view class='node-description-box'>
+      <view class='name'>{{title}}</view>
+      <view class='description'>{{tools.nodeDescriptionHandle(header)}}</view>
+    </view>
+    <view class='node-topics'>
+        <view>
+          主题总数
+        </view> 
+        <view>
+          {{topics}}
+        </view>
+    </view>
+  </view>
+  
+</template>
