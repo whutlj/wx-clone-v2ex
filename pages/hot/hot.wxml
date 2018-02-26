@@ -1,4 +1,4 @@
-<scroll-view scroll-y class="container">
+<view class="container">
   <import src="/template/topicItem"/>
   <view wx:if="{{loading}}" class="loading">
     <image src="/assets/img/loading.gif"></image>
@@ -8,4 +8,4 @@
       <template is="topicTab" data="{{...item}}"></template>
     </view>
   </view>
-</scroll-view>
+</view>

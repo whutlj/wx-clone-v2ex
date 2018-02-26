@@ -26,26 +26,26 @@
       <text>{{topicContent.content}}</text>
     </view>
     <view class="replies-box">
-      <view wx:if="{{replies.length != 0}}">
-        <view wx:for="{{replies}}" wx:key="{{item.id}}" class="replies-content-box">
-          <view class="topic-detail-user-avatar">
-            <view>
-              <image src="{{'https:' + item.member.avatar_normal}}"></image>
+      <view wx:if="{{replies.length != 0}}" class="pd10">
+          <view wx:for="{{replies}}" wx:key="{{item.id}}" class="replies-content-box">
+            <view class="topic-detail-user-avatar">
+              <view>
+                <image src="{{'https:' + item.member.avatar_normal}}"></image>
+              </view>
+              <view class="topic-detail-name">
+                <text>{{item.member.username}}</text>
+              </view>
             </view>
-            <view class="topic-detail-name">
-              <text>{{item.member.username}}</text>
+            <view class="replies-content">
+              <view class="clear">
+                <text class="fl">{{tools.topicReplyTime(item.created)}}</text>
+                <text class="fr">{{index}}楼</text>
+              </view>
+              <view class="mt20">
+                <text>{{item.content}}</text>
+              </view>
             </view>
           </view>
-          <view class="replies-content">
-            <view class="clear">
-              <text class="fl">{{tools.topicReplyTime(item.created)}}</text>
-              <text class="fr">{{index}}楼</text>
-            </view>
-            <view class="mt20">
-              <text>{{item.content}}</text>
-            </view>
-          </view>
-        </view>
       </view>
       <view wx:else class="center">
         <text>暂无回复</text>

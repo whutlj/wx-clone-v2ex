@@ -32,7 +32,7 @@
 }
 
 .replies-content {
-  width: 600rpx;
+  width: 580rpx;
   min-height: 150rpx;
   font-size: 14px;
 }
@@ -46,6 +46,9 @@
 
 .topic-detail-type {
   color: #4caf50;
+}
+.pd10 {
+  padding: 10rpx;
 }
 .fl {
   float: left;
