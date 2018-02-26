@@ -32,7 +32,7 @@
 }
 
 .replies-content {
-  width: 580rpx;
+  width: 560rpx;
   min-height: 150rpx;
   font-size: 14px;
 }
