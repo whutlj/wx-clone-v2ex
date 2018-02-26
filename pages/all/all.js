@@ -18,6 +18,14 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
+  scrollToUpper: function () {
+    console.log('全部刷新')
+    const _self = this
+    _self.setData({
+      loading: true
+    })
+    _self.getAllInfo()
+  },
   onPullDownRefresh: function () {
     console.log('全部刷新')
     const _self = this

@@ -7,7 +7,6 @@ Page({
   data: {
     replies: [],
     topicContent: {},
-    loading: true,
     loadingContent: true,
     loadingReplies: true
   },
@@ -88,11 +87,6 @@ Page({
         _self.setData({
           loadingContent: false
         })
-        if (!_self.loadingReplies) {
-          _self.setData({
-            loading: false
-          })
-        }
       }
     })
   },
@@ -102,6 +96,7 @@ Page({
       url: 'https://www.v2ex.com/api/replies/show.json?topic_id=' + topicId,
       success: function (res) {
         let replies = res.data
+        console.log(replies)
         _self.setData({
           replies: replies
         })
@@ -113,11 +108,6 @@ Page({
         _self.setData({
           loadingReplies: false
         })
-        if (!_self.loadingContent) {
-          _self.setData({
-            loading: false
-          })
-        }
       }
     })
   }

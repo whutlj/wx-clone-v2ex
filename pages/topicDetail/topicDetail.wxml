@@ -1,9 +1,18 @@
-<view>
-  <view  wx:if="{{loading}}" class="loading">
+<scroll-view scroll-y class="scroll-view-box">
+    <import src="/template/topicDetail"/>
+  <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
     <image src="/assets/img/loading.gif"></image>
   </view>
   <view wx:else>
-    <import src="/template/topicDetail"/>
     <template is="topicDetail" data="{{topicContent,replies}}"></template>
   </view>
-</view>
+</scroll-view>
+<!-- <scroll-view scroll-y style="height: 1110rpx;">
+    <import src="/template/topicDetail"/>
+  <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
+    <image src="/assets/img/loading.gif"></image>
+  </view>
+  <view wx:else>
+    <template is="topicDetail" data="{{topicContent,replies}}"></template>
+  </view>
+</scroll-view>

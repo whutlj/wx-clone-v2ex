@@ -1,4 +1,4 @@
-<scroll-view scroll-y="true" class="container" >
+<scroll-view scroll-y class="container">
   <import src="/template/topicItem"/>
   <view wx:if="{{loading}}" class="loading">
     <image src="/assets/img/loading.gif"></image>
