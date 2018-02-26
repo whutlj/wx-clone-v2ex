@@ -1,3 +1,9 @@
 <view>
-  this is topic detail
+  <view  wx:if="{{loading}}" class="loading">
+    <image src="/assets/img/loading.gif"></image>
+  </view>
+  <view wx:else>
+    <import src="/template/topicDetail"/>
+    <template is="topicDetail" data="{{topicContent,replies}}"></template>
+  </view>
 </view>

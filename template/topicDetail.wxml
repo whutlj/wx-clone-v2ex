@@ -1,0 +1,40 @@
+<wxs src="../wxs/tools.wxs" module="tools"></wxs>
+<template name="topicDetail">
+  <view>
+    <view class="topic-detail-box">
+      <view class="topic-detail-user-avatar">
+        <view>
+          <image src="{{'https:' + topicContent.member.avatar_normal}}"></image>
+        </view>
+        <view class="topic-detail-name">
+          <text>{{topicContent.member.username}}</text>
+        </view>
+      </view>
+      <view class="topic-detail-info">
+        <view class="topic-detail-title">{{topicContent.title}}</view>
+        <view>
+          <view class="fl">
+            <text class="topic-detail-type">{{topicContent.node.title}}</text>
+            <text class="topic-detail-created">{{tools.topicReplyTime(topicContent.created)
+            }}</text>
+          </view>
+          <view class="topic-detail-replies fr">{{topicContent.replies}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="topic-detail-content">
+      <text>{{topicContent.content}}</text>
+    </view>
+    <view class="replies-box">
+      <view wx:if="{{replies.length != 0}}">
+        <view wx:for="{{replies.replies}}" wx:key="{{item.id}}">
+          <view></view>
+          <view></view>
+        </view>
+      </view>
+      <view wx:else class="center">
+        <text>暂无回复</text>
+      </view>
+    </view>
+  </view>
+</template>

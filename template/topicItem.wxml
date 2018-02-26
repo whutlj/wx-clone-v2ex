@@ -2,11 +2,11 @@
 <template name="topicTab">
     <view class="topic-box">
       <view class="user-avatar" data-user-name="{{member.username}}" bindtap ="getUserInfo">
-        <image src="{{member.avatar_normal}}"></image>
+        <image src="{{'https:' + member.avatar_normal}}"></image>
         <text class="user-name">{{member.username}}</text>
       </view>
       <view class="topic-title">
-        <text class='topic-detail' data-topic-detail='{{node.id}}' bindtap='getTopicDetail'>{{title}}</text>
+        <text class='topic-detail' data-topic-id='{{id}}' bindtap='getTopicDetail'>{{title}}</text>
         <view class="topic-info" data-node-info='{{node.name}}' bindtap='getNodeInfo'>
           <text class="topic-type">{{node.title}}</text>
           <text class="topic-time">{{tools.topicReplyTime(last_touched)}}</text>

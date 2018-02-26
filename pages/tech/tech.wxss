@@ -1,1 +1,4 @@
 /* pages/tech/tech.wxss */
+.center {
+  text-align: center;
+}

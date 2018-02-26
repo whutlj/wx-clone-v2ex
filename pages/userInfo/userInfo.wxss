@@ -1,1 +1,28 @@
 /* pages/userInfo/userInfo.wxss */
+.user-box {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: #001D25;
+  color: #fff;
+  min-height: 200rpx;
+}
+
+.user-avatar {
+  width: 146rpx;
+  margin: auto 0;
+  padding-left: 10rpx;
+}
+.user-avatar image {
+  width: 146rpx;
+  height: 146rpx;
+  border-radius: 50% 50%;
+}
+.user-description {
+  font-size: 14px;
+  width: 600rpx;
+  margin: auto 0 auto 20rpx;
+}
+

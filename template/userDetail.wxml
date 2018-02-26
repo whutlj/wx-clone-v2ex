@@ -1,0 +1,13 @@
+<wxs src="../wxs/tools.wxs" module="tools"></wxs>
+<template name="userDetail">
+  <view class="user-box">
+    <view class="user-avatar">
+      <image src="{{'https:' + avatar_large}}"></image>
+    </view>
+    <view class="user-description">
+      <view>{{username}}</view>
+      <view>第{{id}}号会员</view>
+      <view>加入于{{tools.formatDate(created)}}</view>
+    </view>
+  </view>
+</template>

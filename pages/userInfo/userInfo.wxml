@@ -1,2 +1,10 @@
 <!--pages/userInfo/userInfo.wxml-->
-<text>pages/userInfo/userInfo.wxml</text>
+<view>
+  <import  src="/template/userDetail"/>
+  <view wx:if="{{loading}}" class="loading">
+    <image  src="/assets/img/loading.gif"></image>
+  </view>
+  <view wx:else>
+    <template is="userDetail" data="{{...userInfo}}"></template>
+  </view>
+</view>

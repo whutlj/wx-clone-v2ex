@@ -41,5 +41,11 @@ var nodeDescriptionHandle = function (data) {
   }
 }
 
+var formatDate = function (timestamp) {
+  var date = getDate(timestamp * 1000)
+  return date.toLocaleString()
+}
+
 module.exports.topicReplyTime = topicReplyTime
 module.exports.nodeDescriptionHandle = nodeDescriptionHandle
+module.exports.formatDate = formatDate

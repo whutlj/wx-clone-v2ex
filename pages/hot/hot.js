@@ -52,7 +52,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    const _slef = this
+    console.log('最热刷新')
+    const _self = this
     _self.setData({
       loading: true
     })
@@ -78,16 +79,19 @@ Page({
       url: "https://www.v2ex.com/api/topics/hot.json",
       dataType:"json",
       success: function (res) {
+        console.log(res.data)
         _self.setData({
-          topicList: res.data,
-          loading: false
+          topicList: res.data
         })
       },
       fail: function () {
         console.log('获取最热主题失败')
+      },
+      complete: function () {
         _self.setData({
           loading: false
         })
+        wx.stopPullDownRefresh()
       }
     })
   },
@@ -104,9 +108,9 @@ Page({
     })
   },
   getTopicDetail: function (event) {
-    const topicDetail = event.currentTarget.dataset.topicDetail
+    const topicId = event.currentTarget.dataset.topicId
     wx.navigateTo({
-      url: '/pages/topicDetail/topicDetail?topicDetail=' + topicDetail,
+      url: '/pages/topicDetail/topicDetail?topicId=' + topicId,
     })
   }
 })

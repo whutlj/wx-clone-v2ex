@@ -11,7 +11,7 @@
     "pages/nodeInfo/nodeInfo"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#0f4fa8",
     "navigationBarTitleText": "V2EX CLONE",
     "navigationBarTextStyle":"white",

@@ -19,6 +19,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    console.log('全部刷新')
     const _self = this
     _self.setData({
       loading: true
@@ -26,7 +27,7 @@ Page({
     _self.getAllInfo()
   },
   getAllInfo: function () {
-    const _slef = this
+    const _self = this
     wx.request({
       url: 'https://www.v2ex.com/api/topics/latest.json',
       method: 'Get',
@@ -34,24 +35,26 @@ Page({
       success: function (res) {
         console.log(res.data)
         let data = res.data
-        _slef.setData({
-          topicList: data,
-          loading: false
+        _self.setData({
+          topicList: data
         })
       },
       fail: function () {
         // TODO 弹出提示框
         console.log('请求数据失败')
-        _slef.setData({
+      },
+      complete: function () {
+        _self.setData({
           loading: false
         })
+        wx.stopPullDownRefresh()
       }
     })
   },
   getUserInfo: function (event) {
     const userName = event.currentTarget.dataset.userName
     wx.navigateTo({
-      url: '/pages/userInfo/userInfo'
+      url: '/pages/userInfo/userInfo?userName=' + userName
     })
   },
   getNodeInfo: function (event) {
@@ -61,9 +64,9 @@ Page({
     })
   },
   getTopicDetail: function (event) {
-    const topicDetail = event.currentTarget.dataset.topicDetail
+    const topicId = event.currentTarget.dataset.topicId
     wx.navigateTo({
-      url: '/pages/topicDetail/topicDetail?topicDetail=' + topicDetail,
+      url: '/pages/topicDetail/topicDetail?topicId=' + topicId,
     })
   }
 })

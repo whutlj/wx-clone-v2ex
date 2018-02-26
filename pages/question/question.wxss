@@ -1,1 +1,4 @@
 /* pages/question/question.wxss */
+.center {
+  text-align: center;
+}
