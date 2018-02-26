@@ -39,7 +39,7 @@
             <view class="replies-content">
               <view class="clear">
                 <text class="fl">{{tools.topicReplyTime(item.created)}}</text>
-                <text class="fr">{{index}}楼</text>
+                <text class="fr">{{index + 1}}楼</text>
               </view>
               <view class="mt20">
                 <text>{{item.content}}</text>
