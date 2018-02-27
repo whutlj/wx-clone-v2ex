@@ -32,13 +32,13 @@
 }
 
 .replies-content {
-  width: 560rpx;
+  width: 540rpx;
   min-height: 150rpx;
   font-size: 14px;
 }
 
 .topic-detail-info {
-  width: 600rpx;
+  width: 540rpx;
 }
 .topic-detail-title {
   color: #828282;

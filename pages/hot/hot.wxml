@@ -1,7 +1,7 @@
 <view class="container">
   <import src="/template/topicItem"/>
   <view wx:if="{{loading}}" class="loading">
-    <image src="/assets/img/loading.gif"></image>
+    <image src="/assets/img/loading.svg"></image>
   </view>
   <view wx:else>
     <view  wx:for="{{topicList}}" wx:for-item ="item" wx:key="item.id" class="m-width">

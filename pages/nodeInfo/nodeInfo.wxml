@@ -2,7 +2,7 @@
 <view>
   <import src='/template/nodeDetail'/>
   <view wx:if="{{loading}}" class="loading">
-    <image src="/assets/img/loading.gif"></image>
+    <image src="/assets/img/loading.svg"></image>
   </view>
   <view wx:else>
     <template is='nodeDetail' data='{{...nodeInfo}}'>

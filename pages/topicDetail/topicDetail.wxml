@@ -7,12 +7,12 @@
     <template is="topicDetail" data="{{topicContent,replies}}"></template>
   </view>
 </scroll-view>
-<!-- <scroll-view scroll-y style="height: 1110rpx;">
+<!-- <view>
     <import src="/template/topicDetail"/>
   <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
-    <image src="/assets/img/loading.gif"></image>
+    <image src="/assets/img/loading.svg"></image>
   </view>
   <view wx:else>
     <template is="topicDetail" data="{{topicContent,replies}}"></template>
   </view>
-</scroll-view>
+</view> -->
