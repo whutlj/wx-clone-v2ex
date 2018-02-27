@@ -6,7 +6,29 @@ Page({
    */
   data: {
     userInfo: {},
-    loading: true
+    loading: true,
+    pictures:[
+      {
+        id: 1,
+        url: '/assets/img/s1.jpg'
+      },
+      {
+        id: 2,
+        url: '/assets/img/s2.jpg'
+      },
+      {
+        id: 3,
+        url: '/assets/img/s3.jpg'
+      },
+      {
+        id: 4,
+        url: '/assets/img/s4.jpg'
+      },
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 1000,
+    duration: 500
   },
 
   /**

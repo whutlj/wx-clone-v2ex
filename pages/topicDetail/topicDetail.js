@@ -19,6 +19,9 @@ Page({
     let topicId = options.topicId
     _self.getTopicContent(topicId)
     _self.getTopicReplies(topicId)
+    wx.setNavigationBarTitle({
+      title: '主题详情',
+    })
   },
 
   /**

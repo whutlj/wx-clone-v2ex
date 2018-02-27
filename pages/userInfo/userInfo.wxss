@@ -26,3 +26,12 @@
   margin: auto 0 auto 20rpx;
 }
 
+.scroll-hy {
+  height: 200px;
+  width: 100%;
+  display: inline-block;
+}
+.scroll-hy image {
+  width: 100%;
+  height: 100%;
+}

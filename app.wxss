@@ -44,7 +44,7 @@ scroll-view, view {
 
 .topic-title {
   width: 520rpx;
-  height: 130rpx;
+  min-height: 130rpx;
   overflow: hidden;
   font-size: 12px;
   color: #757575;
