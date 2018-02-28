@@ -20,12 +20,13 @@
         <image src="/assets/img/s4.jpg"></image>
       </view>
     </scroll-view>
-    <swiper indicator-dots="{{indicatorDots}}"
+    <button type="primary" size="mini" bindtap="loginBtn">跳转登录</button>
+    <swiper class="user-swiper" indicator-dots="{{indicatorDots}}"
         autoplay="{{autoplay}}"
         interval="{{interval}}"
         duration="{{duration}}">
       <block wx:for="{{pictures}}" wx:key="item.id">
-        <swiper-item >
+        <swiper-item>
           <image src="{{item.url}}"></image>
         </swiper-item>
       </block>

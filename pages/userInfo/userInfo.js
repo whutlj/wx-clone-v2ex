@@ -118,5 +118,13 @@ Page({
         })
       }
     })
+  },
+  loginBtn: function () {
+    console.log('登录')
+    wx.getUserInfo({
+      success: function (e) {
+        console.log(e)
+      }
+    })
   }
 })

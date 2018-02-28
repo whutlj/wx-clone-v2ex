@@ -8,7 +8,8 @@
     "pages/creativity/creativity",
     "pages/topicDetail/topicDetail",
     "pages/userInfo/userInfo",
-    "pages/nodeInfo/nodeInfo"
+    "pages/nodeInfo/nodeInfo",
+    "pages/user/login"
   ],
   "window":{
     "backgroundTextStyle":"dark",
