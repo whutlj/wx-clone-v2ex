@@ -8,7 +8,9 @@ Page({
     replies: [],
     topicContent: {},
     loadingContent: true,
-    loadingReplies: true
+    loadingReplies: true,
+    focusReply: false,
+    bottom: 0
   },
 
   /**
@@ -113,5 +115,39 @@ Page({
         })
       }
     })
+  },
+  userReply: function () {
+    // wx.authorize({
+    //   scope: 'scope.record',
+    //   success: function () {
+    //     console.log('授权成功')
+    //   }
+    // })
+    const _self = this
+    _self.setData({
+      focusReply: true
+    })
+  },
+  closeReply: function () {
+    const _self = this
+    _self.setData({
+      focusReply: false
+    })
+  },
+  bindConfirm: function (e) {
+    const _self = this
+    _self.setData({
+      focusReply: false
+    })
+  },
+  bindFocus: function (e) {
+    const _self = this
+    let bottom = e.detail.height
+    _self.setData({
+      bottom: bottom
+    })
+    console.log('聚焦')
+    console.log(e)
   }
+  
 })

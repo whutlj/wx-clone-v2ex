@@ -1,12 +1,26 @@
-<scroll-view scroll-y class="scroll-view-box">
-    <import src="/template/topicDetail"/>
-  <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
-    <image src="/assets/img/loading.svg"></image>
+<view style="overflow: {{focusReply? 'hidden': 'auto'}}">
+  <scroll-view scroll-y class="scroll-view-box" >
+      <import src="/template/topicDetail"/>
+    <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
+      <image src="/assets/img/loading.svg"></image>
+    </view>
+    <view wx:else>
+      <template is="topicDetail" data="{{topicContent,replies}}"></template>
+    </view>
+  </scroll-view>
+  <block wx:if="{{focusReply}}">
+    <view class='reply-input-box' style="top:{{bottom + 'rpx'}}">
+      <view>
+        <input class="reply-input" focus="{{focusReply}}" placeholder='请输入回复内容' placeholder-class='input-placeholder' bindconfirm='bindConfirm' bindfocus='bindFocus'></input>
+      </view>
+      <view class='clear'>
+        <button type="success" size="mini" bindtap="closeReply" class="close-btn">关闭</button>
+      </view>
+    </view>
+  </block>
+  <view class="mark" wx:if="{{focusReply}}">
   </view>
-  <view wx:else>
-    <template is="topicDetail" data="{{topicContent,replies}}"></template>
-  </view>
-</scroll-view>
+</view>
 <!-- <view>
     <import src="/template/topicDetail"/>
   <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >

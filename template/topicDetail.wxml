@@ -25,6 +25,9 @@
     <view class="topic-detail-content">
       <text>{{topicContent.content}}</text>
     </view>
+    <view class="reply-btn">
+      <button type='success' size='mini' bindtap='userReply'>回复</button>
+    </view>
     <view class="replies-box">
       <view wx:if="{{replies.length != 0}}" class="pd10">
           <view wx:for="{{replies}}" wx:key="{{item.id}}" class="replies-content-box">
