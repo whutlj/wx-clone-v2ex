@@ -9,9 +9,9 @@
     </view>
   </scroll-view>
   <block wx:if="{{focusReply}}">
-    <view class='reply-input-box' style="top:{{bottom + 'rpx'}}">
+    <view class='reply-input-box' style="bottom:{{bottom + 'rpx'}}">
       <view>
-        <input class="reply-input" focus="{{focusReply}}" placeholder='请输入回复内容' placeholder-class='input-placeholder' bindconfirm='bindConfirm' bindfocus='bindFocus'></input>
+        <input class="reply-input" focus="{{focusReply}}" placeholder='请输入回复内容' placeholder-class='input-placeholder' bindconfirm='bindConfirm' bindfocus='bindFocus' bindblur="bindBlur"></input>
       </view>
       <view class='clear'>
         <button type="success" size="mini" bindtap="closeReply" class="close-btn">关闭</button>

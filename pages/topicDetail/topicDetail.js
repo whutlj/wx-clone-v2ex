@@ -146,8 +146,11 @@ Page({
     _self.setData({
       bottom: bottom
     })
-    console.log('聚焦')
-    console.log(e)
+  },
+  bindBlur: function (e) {
+    this.setData({
+      bottom: 0
+    })
   }
   
 })
