@@ -111,8 +111,9 @@
 }
 
 .reply-input-box {
-  position: fixed;
+  position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 310rpx;
   padding: 20rpx;
@@ -123,8 +124,14 @@
 .reply-input-box input{
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 64rpx;
+  line-height: 64rpx;
 }
 .close-btn {
   margin:20rpx 0;
   float: right;
+}
+.scroll-box-view {
+  height: 1334rpx;
+  overflow: hidden;
 }

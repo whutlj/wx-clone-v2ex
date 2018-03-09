@@ -10,7 +10,8 @@ Page({
     loadingContent: true,
     loadingReplies: true,
     focusReply: false,
-    bottom: 0
+    bottom: 0,
+    inputText:''
   },
 
   /**
@@ -141,16 +142,12 @@ Page({
     })
   },
   bindFocus: function (e) {
-    const _self = this
-    let bottom = e.detail.height
-    _self.setData({
-      bottom: bottom
-    })
+    console.log(e)
   },
-  bindBlur: function (e) {
+  bindInput: function (e) {
+    let val = e.detail.value
     this.setData({
-      bottom: 0
+      inputText: val
     })
   }
-  
 })

@@ -1,5 +1,5 @@
-<view style="overflow: {{focusReply? 'hidden': 'auto'}}">
-  <scroll-view scroll-y class="scroll-view-box" >
+<view class="scroll-box-view">
+  <scroll-view scroll-y="{{!focusReply}}" class="scroll-view-box" >
       <import src="/template/topicDetail"/>
     <view  wx:if="{{loadingContent || loadingReplies}}" class="loading" >
       <image src="/assets/img/loading.svg"></image>
@@ -9,12 +9,16 @@
     </view>
   </scroll-view>
   <block wx:if="{{focusReply}}">
-    <view class='reply-input-box' style="bottom:{{bottom + 'rpx'}}">
+    <view class='reply-input-box'>
       <view>
-        <input class="reply-input" focus="{{focusReply}}" placeholder='请输入回复内容' placeholder-class='input-placeholder' bindconfirm='bindConfirm' bindfocus='bindFocus' bindblur="bindBlur"></input>
+ 
+        <input class="reply-input" focus="{{focusReply}}" placeholder='请输入回复内容' placeholder-class='input-placeholder'bindinput="bindInput"  bindconfirm='bindConfirm' bindfocus='bindFocus' value="{{inputText}}" cursor-spacing='113'></input>
       </view>
       <view class='clear'>
         <button type="success" size="mini" bindtap="closeReply" class="close-btn">关闭</button>
+      </view>
+      <view>
+        <text>{{inputText}}</text>
       </view>
     </view>
   </block>
