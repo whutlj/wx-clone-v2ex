@@ -1,4 +1,14 @@
 // pages/userInfo/userInfo.js
+function getRandomColor() {
+  let result = [];
+  for (let i = 0;i < 3; i++) {
+    let color = Math.floor(Math.random() * 256).toString(16)
+    color.length === 1 && (color = '0' + color);
+    result.push(color)
+  }
+  return '#'+ result.join('')
+}
+
 Page({
 
   /**
@@ -59,7 +69,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let color = getRandomColor()
+    console.log(color)
   },
 
   /**

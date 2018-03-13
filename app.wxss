@@ -44,18 +44,19 @@ scroll-view, view {
 
 .topic-title {
   width: 520rpx;
-  min-height: 130rpx;
+  min-height: 120rpx;
+  padding: 10rpx;
   overflow: hidden;
   font-size: 12px;
   color: #757575;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #7d7d7d;
   font-size: 12px;
 }
+.topic-detail{
+  min-height: 80rpx;
+}
 .topic-info {
-
+  margin-top:10rpx;
+  height: 40rpx;
 }
 .user-name {
   color: #7d7d7d;

@@ -6,7 +6,7 @@
         <text class="user-name">{{member.username}}</text>
       </view>
       <view class="topic-title">
-        <text class='topic-detail' data-topic-id='{{id}}' bindtap='getTopicDetail'>{{title}}</text>
+        <view class='topic-detail' data-topic-id='{{id}}' bindtap='getTopicDetail'>{{title}}</view>
         <view class="topic-info" data-node-info='{{node.name}}' bindtap='getNodeInfo'>
           <text class="topic-type">{{node.title}}</text>
           <text class="topic-time">{{tools.topicReplyTime(last_touched)}}</text>
