@@ -10,7 +10,6 @@ function getRandomColor() {
 }
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -38,7 +37,8 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 1000,
-    duration: 500
+    duration: 500,
+    filePath: '' // 从相册或者
   },
 
   /**
@@ -135,6 +135,23 @@ Page({
     wx.getUserInfo({
       success: function (e) {
         console.log(e)
+      }
+    })
+  },
+  bindButtonTap: function () {
+    console.log('选取视频')
+    video.chooseVideo({
+      sourceType: ['album', 'camera'],
+      compressed: true,
+      success: (res) => {
+        if (res.tempFilePath) {
+          this.setData({
+            filePath: res.tempFilePath
+          })
+        }
+      },
+      fail: (err) => {
+        console.log(err.message)
       }
     })
   }
