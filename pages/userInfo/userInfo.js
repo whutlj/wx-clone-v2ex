@@ -38,7 +38,7 @@ Page({
     autoplay: true,
     interval: 1000,
     duration: 500,
-    filePath: '' // 从相册或者
+    filePath: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400' // 从相册或者
   },
 
   /**
@@ -62,15 +62,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   
+   this.videoContext = wx.createVideoContext('myvideo')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let color = getRandomColor()
-    console.log(color)
   },
 
   /**
@@ -138,9 +136,13 @@ Page({
       }
     })
   },
+  inputData: '', //custom data
+  bindblur: function (e) {
+    this.inputData = e.detail.value
+  },
   bindButtonTap: function () {
     console.log('选取视频')
-    video.chooseVideo({
+    wx.chooseVideo({
       sourceType: ['album', 'camera'],
       compressed: true,
       success: (res) => {
@@ -154,5 +156,17 @@ Page({
         console.log(err.message)
       }
     })
+  },
+  bindSendDanmu: function () {
+    this.videoContext.sendDanmu({
+      text: this.inputData,
+      color: getRandomColor()
+    })
+  },
+  bindFullScreen: function () {
+    this.videoContext.requestFullScreen()
+  },
+  bindExitFullScreen: function () {
+    this.videoContext.exitFullScreen()
   }
 })
